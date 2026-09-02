@@ -21,3 +21,8 @@ const tous = panier.reduce((ac, n) =>{
 },0);
 console.log(`${somme}`);
 console.log(`${tous}`);
+function appliquerRemise(panier, pourcentage){
+    const newPanier = panier.map((item)=> item.prix * (1 - pourcentage))
+    return newPanier;
+}
+console.log(appliquerRemise(panier, 0.1) );
